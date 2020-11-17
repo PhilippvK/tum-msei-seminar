@@ -5,9 +5,13 @@ Scientific Seminar on 'TinyNAS: Network Architecture Search for Automated Machin
 ## Details
 
 **Author:** Philipp van Kempen
+
 **Supervisor:** Alex Hoffman
+
 **Topic:** *TinyNAS: Network Architecture Search for Automated Machine Learning Deployment on Extreme Edge Devices*
+
 **Semester:** WS20/21
+
 **Deadline:** 14.12.20 (v1.0), 18.01.21 (Final with slides)
 
 ## Schedule
