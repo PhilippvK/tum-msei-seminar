@@ -56,6 +56,7 @@ TODO: make a table
 
 - [ ] ...
 
-### References
+### Main References
 
-- ...
+- Liberis, E., Dudziak, Ł., & Lane, N. D. (2020). µNAS: Constrained Neural Architecture Search for Microcontrollers. Retrieved from http://arxiv.org/abs/2010.14246
+- Lin, J., Chen, W.-M., Lin, Y., Cohn, J., Gan, C., & Han, S. (2020). MCUNet: Tiny Deep Learning on IoT Devices, (NeurIPS), 1–12. Retrieved from http://arxiv.org/abs/2007.10319
