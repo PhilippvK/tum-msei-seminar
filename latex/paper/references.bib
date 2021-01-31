@@ -1,0 +1,325 @@
+@article{mcunet2020,
+abstract = {Machine learning on tiny IoT devices based on microcontroller units (MCU) is appealing but challenging: the memory of microcontrollers is 2-3 orders of magnitude less even than mobile phones. We propose MCUNet, a framework that jointly designs the efficient neural architecture (TinyNAS) and the lightweight inference engine (TinyEngine), enabling ImageNet-scale inference on microcontrollers. TinyNAS adopts a two-stage neural architecture search approach that first optimizes the search space to fit the resource constraints, then specializes the network architecture in the optimized search space. TinyNAS can automatically handle diverse constraints (i.e. device, latency, energy, memory) under low search costs. TinyNAS is co-designed with TinyEngine, a memory-efficient inference library to expand the design space and fit a larger model. TinyEngine adapts the memory scheduling according to the overall network topology rather than layer-wise optimization, reducing the memory usage by 2.7x, and accelerating the inference by 1.7-3.3x compared to TF-Lite Micro and CMSIS-NN. MCUNet is the first to achieves {\textgreater}70{\%} ImageNet top1 accuracy on an off-the-shelf commercial microcontroller, using 3.6x less SRAM and 6.6x less Flash compared to quantized MobileNetV2 and ResNet-18. On visual{\&}audio wake words tasks, MCUNet achieves state-of-the-art accuracy and runs 2.4-3.4x faster than MobileNetV2 and ProxylessNAS-based solutions with 2.2-2.6x smaller peak SRAM. Our study suggests that the era of always-on tiny machine learning on IoT devices has arrived.},
+archivePrefix = {arXiv},
+arxivId = {2007.10319},
+author = {Lin, Ji and Chen, Wei-Ming and Lin, Yujun and Cohn, John and Gan, Chuang and Han, Song},
+eprint = {2007.10319},
+file = {:Users/Philipp/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/TUM/Master/3{\_}WS20/SEMINAR/Literature/NeurIPS-2020-mcunet-tiny-deep-learning-on-iot-devices-Paper.pdf:pdf},
+number = {NeurIPS},
+pages = {1--12},
+title = {{MCUNet: Tiny Deep Learning on IoT Devices}},
+url = {http://arxiv.org/abs/2007.10319},
+year = {2020}
+}
+
+@article{unas2020,
+abstract = {IoT devices are powered by microcontroller units (MCUs) which are extremely resource-scarce: a typical MCU may have an underpowered processor and around 64 KB of memory and persistent storage, which is orders of magnitude fewer computational resources than is typically required for deep learning. Designing neural networks for such a platform requires an intricate balance between keeping high predictive performance (accuracy) while achieving low memory and storage usage and inference latency. This is extremely challenging to achieve manually, so in this work, we build a neural architecture search (NAS) system, called {\$}\backslashmu{\$}NAS, to automate the design of such small-yet-powerful MCU-level networks. {\$}\backslashmu{\$}NAS explicitly targets the three primary aspects of resource scarcity of MCUs: the size of RAM, persistent storage and processor speed. {\$}\backslashmu{\$}NAS represents a significant advance in resource-efficient models, especially for "mid-tier" MCUs with memory requirements ranging from 0.5 KB to 64 KB. We show that on a variety of image classification datasets {\$}\backslashmu{\$}NAS is able to (a) improve top-1 classification accuracy by up to 4.8{\%}, or (b) reduce memory footprint by 4--13x, or (c) reduce the number of multiply-accumulate operations by {\$}\backslashapprox{\$}900x, compared to existing MCU specialist literature and resource-efficient models.},
+archivePrefix = {arXiv},
+arxivId = {2010.14246},
+author = {Liberis, Edgar and Dudziak, {\L}ukasz and Lane, Nicholas D.},
+eprint = {2010.14246},
+file = {:Users/Philipp/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/TUM/Master/3{\_}WS20/SEMINAR/Literature/2010.14246.pdf:pdf},
+title = {{$\mu$NAS: Constrained Neural Architecture Search for Microcontrollers}},
+url = {http://arxiv.org/abs/2010.14246},
+year = {2020}
+}
+
+@article{tflm2020,
+abstract = {Deep learning inference on embedded devices is a burgeoning field with myriad applications because tiny embedded devices are omnipresent. But we must overcome major challenges before we can benefit from this opportunity. Embedded processors are severely resource constrained. Their nearest mobile counterparts exhibit at least a 100---1,000x difference in compute capability, memory availability, and power consumption. As a result, the machine-learning (ML) models and associated ML inference framework must not only execute efficiently but also operate in a few kilobytes of memory. Also, the embedded devices' ecosystem is heavily fragmented. To maximize efficiency, system vendors often omit many features that commonly appear in mainstream systems, including dynamic memory allocation and virtual memory, that allow for cross-platform interoperability. The hardware comes in many flavors (e.g., instruction-set architecture and FPU support, or lack thereof). We introduce TensorFlow Lite Micro (TF Micro), an open-source ML inference framework for running deep-learning models on embedded systems. TF Micro tackles the efficiency requirements imposed by embedded-system resource constraints and the fragmentation challenges that make cross-platform interoperability nearly impossible. The framework adopts a unique interpreter-based approach that provides flexibility while overcoming these challenges. This paper explains the design decisions behind TF Micro and describes its implementation details. Also, we present an evaluation to demonstrate its low resource requirement and minimal run-time performance overhead.},
+archivePrefix = {arXiv},
+arxivId = {2010.08678},
+author = {David, Robert and Duke, Jared and Jain, Advait and Reddi, Vijay Janapa and Jeffries, Nat and Li, Jian and Kreeger, Nick and Nappier, Ian and Natraj, Meghna and Regev, Shlomi and Rhodes, Rocky and Wang, Tiezhen and Warden, Pete},
+eprint = {2010.08678},
+file = {:Users/Philipp/Downloads/2010.08678-2.pdf:pdf},
+title = {{TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems}},
+url = {http://arxiv.org/abs/2010.08678},
+year = {2020}
+}
+
+@article{sparse2019,
+abstract = {The vast majority of processors in the world are actually microcontroller units (MCUs), which find widespread use performing simple control tasks in applications ranging from automobiles to medical devices and office equipment. The Internet of Things (IoT) promises to inject machine learning into many of these every-day objects via tiny, cheap MCUs. However, these resource-impoverished hardware platforms severely limit the complexity of machine learning models that can be deployed. For example, although convolutional neural networks (CNNs) achieve state-of-theart results on many visual recognition tasks, CNN inference on MCUs is challenging due to severe finite memory limitations. To circumvent the memory challenge associated with CNNs, various alternatives have been proposed that do fit within the memory budget of an MCU, albeit at the cost of prediction accuracy. This paper challenges the idea that CNNs are not suitable for deployment on MCUs. We demonstrate that it is possible to automatically design CNNs which generalize well, while also being small enough to fit onto memory-limited MCUs. Our Sparse Architecture Search method combines neural architecture search with pruning in a single, unified approach, which learns superior models on four popular IoT datasets. The CNNs we find are more accurate and up to 4.35× smaller than previous approaches, while meeting the strict MCU working memory constraint.},
+archivePrefix = {arXiv},
+arxivId = {1905.12107},
+author = {Fedorov, Igor and Adams, Ryan P. and Mattina, Matthew and Whatmough, Paul N.},
+eprint = {1905.12107},
+file = {:Users/Philipp/Downloads/1905.12107.pdf:pdf},
+journal = {arXiv},
+pages = {1--26},
+title = {{SpArSe: Sparse architecture search for CNNs on resource-constrained microcontrollers}},
+year = {2019}
+}
+
+@article{proxyless2018,
+abstract = {Neural architecture search (NAS) has a great impact by automatically designing effective neural network architectures. However, the prohibitive computational demand of conventional NAS algorithms (e.g. 104 GPU hours) makes it difficult to directly search the architectures on large-scale tasks (e.g. ImageNet). Differentiable NAS can reduce the cost of GPU hours via a continuous representation of network architecture but suffers from the high GPU memory consumption issue (grow linearly w.r.t. candidate set size). As a result, they need to utilize proxy tasks, such as training on a smaller dataset, or learning with only a few blocks, or training just for a few epochs. These architectures optimized on proxy tasks are not guaranteed to be optimal on the target task. In this paper, we present ProxylessNAS that can directly learn the architectures for large-scale target tasks and target hardware platforms. We address the high memory consumption issue of differentiable NAS and reduce the computational cost (GPU hours and GPU memory) to the same level of regular training while still allowing a large candidate set. Experiments on CIFAR-10 and ImageNet demonstrate the effectiveness of directness and specialization. On CIFAR-10, our model achieves 2.08{\%} test error with only 5.7M parameters, better than the previous state-of-the-art architecture AmoebaNet-B, while using 6× fewer parameters. On ImageNet, our model achieves 3.1{\%} better top-1 accuracy than MobileNetV2, while being 1.2× faster with measured GPU latency. We also apply ProxylessNAS to specialize neural architectures for hardware with direct hardware metrics (e.g. latency) and provide insights for efficient CNN architecture design.1},
+archivePrefix = {arXiv},
+arxivId = {1812.00332},
+author = {Cai, Han and Zhu, Ligeng and Han, Song},
+eprint = {1812.00332},
+file = {:Users/Philipp/Downloads/1812.00332.pdf:pdf},
+journal = {arXiv},
+pages = {1--13},
+title = {{Proxylessnas: Direct neural architecture search on target task and hardware}},
+year = {2018}
+}
+
+@article{micronets2020,
+abstract = {Executing machine learning workloads locally on resource constrained microcontrollers (MCUs) promises to drastically expand the application space of IoT. However, so-called TinyML presents severe technical challenges, as deep neural network inference demands a large compute and memory budget. To address this challenge, neural architecture search (NAS) promises to help design accurate ML models that meet the tight MCU memory, latency and energy constraints. A key component of NAS algorithms is their latency/energy model, i.e., the mapping from a given neural network architecture to its inference latency/energy on an MCU. In this paper, we observe an intriguing property of NAS search spaces for MCU model design: on average, model latency varies linearly with model operation (op) count under a uniform prior over models in the search space. Exploiting this insight, we employ differentiable NAS (DNAS) to search for models with low memory usage and low op count, where op count is treated as a viable proxy to latency. Experimental results validate our methodology, yielding our MicroNet models, which we deploy on MCUs using Tensorflow Lite Micro, a standard open-source NN inference runtime widely used in the TinyML community. MicroNets demonstrate state-of-the-art results for all three TinyMLperf industry-standard benchmark tasks: visual wake words, audio keyword spotting, and anomaly detection.},
+archivePrefix = {arXiv},
+arxivId = {2010.11267},
+author = {Banbury, Colby and Zhou, Chuteng and Fedorov, Igor and Navarro, Ramon Matas and Thakker, Urmish and Gope, Dibakar and Reddi, Vijay Janapa and Mattina, Matthew and Whatmough, Paul N.},
+eprint = {2010.11267},
+file = {:Users/Philipp/Downloads/2010.11267-2.pdf:pdf},
+number = {},
+title = {{MicroNets: Neural Network Architectures for Deploying TinyML Applications on Commodity Microcontrollers}},
+url = {http://arxiv.org/abs/2010.11267},
+year = {2020}
+}
+
+@article{ai2edge2020,
+abstract = {Edge computing and artificial intelligence (AI), especially deep learning for nowadays, are gradually intersecting to build a novel system, called edge intelligence. However, the development of edge intelligence systems encounters some challenges, and one of these challenges is the $\backslash$textit{\{}computational gap{\}} between computation-intensive deep learning algorithms and less-capable edge systems. Due to the computational gap, many edge intelligence systems cannot meet the expected performance requirements. To bridge the gap, a plethora of deep learning techniques and optimization methods are proposed in the past years: light-weight deep learning models, network compression, and efficient neural architecture search. Although some reviews or surveys have partially covered this large body of literature, we lack a systematic and comprehensive review to discuss all aspects of these deep learning techniques which are critical for edge intelligence implementation. As various and diverse methods which are applicable to edge systems are proposed intensively, a holistic review would enable edge computing engineers and community to know the state-of-the-art deep learning techniques which are instrumental for edge intelligence and to facilitate the development of edge intelligence systems. This paper surveys the representative and latest deep learning techniques that are useful for edge intelligence systems, including hand-crafted models, model compression, hardware-aware neural architecture search and adaptive deep learning models. Finally, based on observations and simple experiments we conducted, we discuss some future directions.},
+archivePrefix = {arXiv},
+arxivId = {2011.14808},
+author = {Liu, Di and Kong, Hao and Luo, Xiangzhong and Liu, Weichen and Subramaniam, Ravi},
+eprint = {2011.14808},
+file = {:Users/Philipp/Downloads/2011.14808.pdf:pdf},
+pages = {1--23},
+title = {{Bringing AI To Edge: From Deep Learning's Perspective}},
+url = {http://arxiv.org/abs/2011.14808},
+year = {2020}
+}
+
+@article{dory2020,
+abstract = {The deployment of Deep Neural Networks (DNNs) on end-nodes at the extreme edge of the Internet-of-Things is a critical enabler to support pervasive Deep Learning-enhanced applications. Low-Cost MCU-based end-nodes have limited on-chip memory and often replace caches with scratchpads, to reduce area overheads and increase energy efficiency -- requiring explicit DMA-based memory transfers between different levels of the memory hierarchy. Mapping modern DNNs on these systems requires aggressive topology-dependent tiling and double-buffering. In this work, we propose DORY (Deployment Oriented to memoRY) - an automatic tool to deploy DNNs on low cost MCUs with typically less than 1MB of on-chip SRAM memory. DORY abstracts tiling as a Constraint Programming (CP) problem: it maximizes L1 memory utilization under the topological constraints imposed by each DNN layer. Then, it generates ANSI C code to orchestrate off- and on-chip transfers and computation phases. Furthermore, to maximize speed, DORY augments the CP formulation with heuristics promoting performance-effective tile sizes. As a case study for DORY, we target GreenWaves Technologies GAP8, one of the most advanced parallel ultra-low power MCU-class devices on the market. On this device, DORY achieves up to 2.5x better MAC/cycle than the GreenWaves proprietary software solution and 18.1x better than the state-of-the-art result on an STM32-F746 MCU on single layers. Using our tool, GAP-8 can perform end-to-end inference of a 1.0-MobileNet-128 network consuming just 63 pJ/MAC on average @ 4.3 fps - 15.4x better than an STM32-F746. We release all our developments - the DORY framework, the optimized backend kernels, and the related heuristics - as open-source software.},
+archivePrefix = {arXiv},
+arxivId = {2008.07127},
+author = {Burrello, Alessio and Garofalo, Angelo and Bruschi, Nazareno and Tagliavini, Giuseppe and Rossi, Davide and Conti, Francesco},
+eprint = {2008.07127},
+file = {:Users/Philipp/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/TUM/Master/3{\_}WS20/SEMINAR/Literature/2008.07127.pdf:pdf},
+number = {732631},
+pages = {1--14},
+title = {{DORY: Automatic End-to-End Deployment of Real-World DNNs on Low-Cost IoT MCUs}},
+url = {http://arxiv.org/abs/2008.07127},
+year = {2020}
+}
+
+@article{darts2018,
+abstract = {This paper addresses the scalability challenge of architecture search by formulating the task in a differentiable manner. Unlike conventional approaches of applying evolution or reinforcement learning over a discrete and non-differentiable search space, our method is based on the continuous relaxation of the architecture representation, allowing efficient search of the architecture using gradient descent. Extensive experiments on CIFAR-10, ImageNet, Penn Treebank and WikiText-2 show that our algorithm excels in discovering high-performance convolutional architectures for image classification and recurrent architectures for language modeling, while being orders of magnitude faster than state-of-the-art non-differentiable techniques. Our implementation has been made publicly available to facilitate further research on efficient architecture search algorithms.},
+archivePrefix = {arXiv},
+arxivId = {1806.09055},
+author = {Liu, Hanxiao and Simonyan, Karen and Yang, Yiming},
+eprint = {1806.09055},
+file = {:Users/Philipp/Downloads/1806.09055.pdf:pdf},
+journal = {arXiv},
+pages = {1--13},
+title = {{Darts: Differentiable architecture search}},
+year = {2018}
+}
+
+@article{automl2019,
+abstract = {Deep learning has penetrated all aspects of our lives and brought us great convenience. However, the process of building a high-quality deep learning system for a specific task is not only time-consuming but also requires lots of resources and relies on human expertise, which hinders the development of deep learning in both industry and academia. To alleviate this problem, a growing number of research projects focus on automated machine learning (AutoML). In this paper, we provide a comprehensive and up-to-date study on the state-of-the-art AutoML. First, we introduce the AutoML techniques in details according to the machine learning pipeline. Then we summarize existing Neural Architecture Search (NAS) research, which is one of the most popular topics in AutoML. We also compare the models generated by NAS algorithms with those human-designed models. Finally, we present several open problems for future research.},
+archivePrefix = {arXiv},
+arxivId = {1908.00709},
+author = {He, Xin and Zhao, Kaiyong and Chu, Xiaowen},
+doi = {10.1016/j.knosys.2020.106622},
+eprint = {1908.00709},
+file = {:Users/Philipp/Downloads/1908.00709.pdf:pdf},
+issn = {09507051},
+journal = {arXiv},
+keywords = {AutoML,Machine learning,NAS,Survey},
+number = {Dl},
+title = {{AutoML: A survey of the state-of-the-Art}},
+year = {2019}
+}
+
+@article{once4all2019,
+abstract = {Efficient deployment of deep learning models requires specialized neural network architectures to best fit different hardware platforms and efficiency constraints (defined as deployment scenarios). Traditional approaches either manually design or use AutoML to search a specialized neural network and train it from scratch for each case. It is expensive and unscalable since their training cost is linear w.r.t. the number of deployment scenarios. In this work, we introduce Once for All (OFA) for efficient neural network design to handle many deployment scenarios, a new methodology that decouples model training from architecture search. Instead of training a specialized model for each case, we propose to train a once-for-all network that supports diverse architectural settings (depth, width, kernel size, and resolution). Given a deployment scenario, we can later search a specialized sub-network by selecting from the once-for-all network without training. As such, the training cost of specialized models is reduced from O(N) to O(1). However, it's challenging to prevent interference between many sub-networks. Therefore we propose the progressive shrinking algorithm, which is capable of training a once-for-all network to support more than 1019 sub-networks while maintaining the same accuracy as independently trained networks, saving the non-recurring engineering (NRE) cost. Extensive experiments on various hardware platforms (Mobile/CPU/GPU) and efficiency constraints show that OFA consistently achieves the same level (or better) ImageNet accuracy than SOTA neural architecture search (NAS) methods. Remarkably, OFA is orders of magnitude faster than NAS in handling multiple deployment scenarios (N). With N = 40, OFA requires 14× fewer GPU hours than ProxylessNAS, 16× fewer GPU hours than FBNet and 1,142× fewer GPU hours than MnasNet. The more deployment scenarios, the more savings over NAS.},
+archivePrefix = {arXiv},
+arxivId = {1908.09791},
+author = {Cai, Han and Gan, Chuang and Han, Song},
+eprint = {1908.09791},
+file = {:Users/Philipp/Downloads/1908.09791.pdf:pdf},
+journal = {arXiv},
+pages = {1--15},
+title = {{Once for all: Train one network and specialize it for efficient deployment}},
+year = {2019}
+}
+
+@article{wsnas2020,
+abstract = {Neural architecture search (NAS) has attracted increasing attentions in both academia and industry. In the early age, researchers mostly applied individual search methods which sample and evaluate the candidate architectures separately and thus incur heavy computational overheads. To alleviate the burden, weight-sharing methods were proposed in which exponentially many architectures share weights in the same super-network, and the costly training procedure is performed only once. These methods, though being much faster, often suffer the issue of instability. This paper provides a literature review on NAS, in particular the weight-sharing methods, and points out that the major challenge comes from the optimization gap between the super-network and the sub-architectures. From this perspective, we summarize existing approaches into several categories according to their efforts in bridging the gap, and analyze both advantages and disadvantages of these methodologies. Finally, we share our opinions on the future directions of NAS and AutoML. Due to the expertise of the authors, this paper mainly focuses on the application of NAS to computer vision problems and may bias towards the work in our group.},
+archivePrefix = {arXiv},
+arxivId = {2008.01475},
+author = {Xie, Lingxi and Chen, Xin and Bi, Kaifeng and Wei, Longhui and Xu, Yuhui and Chen, Zhengsu and Wang, Lanfei and Xiao, An and Chang, Jianlong and Zhang, Xiaopeng and Tian, Qi},
+eprint = {2008.01475},
+file = {:Users/Philipp/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/TUM/Master/3{\_}WS20/SEMINAR/Literature/2008.01475.pdf:pdf},
+journal = {arXiv},
+keywords = {AutoML,Computer Vision,Neural Architecture Search,Optimization Gap,Super-Network,Weight-Sharing},
+pages = {1--24},
+title = {{Weight-sharing neural architecture search: A battle to shrink the optimization gap}},
+year = {2020}
+}
+
+@article{mnetv32019,
+abstract = {Inverted bottleneck layers, which are built upon depthwise convolutions, have been the predominant building blocks in state-of-the-art object detection models on mobile devices. In this work, we question the optimality of this design pattern over a broad range of mobile accelerators by revisiting the usefulness of regular convolutions. We achieve substantial improvements in the latency-accuracy trade-off by incorporating regular convolutions in the search space, and effectively placing them in the network via neural architecture search. We obtain a family of object detection models, MobileDets, that achieve state-of-the-art results across mobile accelerators. On the COCO object detection task, MobileDets outperform MobileNetV3+SSDLite by 1.7 mAP at comparable mobile CPU inference latencies. MobileDets also outperform MobileNetV2+SSDLite by 1.9 mAP on mobile CPUs, 3.7 mAP on EdgeTPUs and 3.4 mAP on DSPs while running equally fast. Moreover, MobileDets are comparable with the state-of-the-art MnasFPN on mobile CPUs even without using the feature pyramid, and achieve better mAP scores on both EdgeTPUs and DSPs with up to 2X speedup.},
+author = {Howard, Andrew and Wang, Weijun and Chu, Grace and Chen, Liang-chieh and Chen, Bo and Tan, Mingxing},
+file = {:Users/Philipp/Library/Mobile Documents/com{\~{}}apple{\~{}}CloudDocs/TUM/Master/3{\_}WS20/SEMINAR/Literature/Howard{\_}Searching{\_}for{\_}MobileNetV3{\_}ICCV{\_}2019{\_}paper.pdf:pdf},
+journal = {International Conference on Computer Vision},
+pages = {1314--1324},
+title = {{Searching for MobileNetV3 Accuracy vs MADDs vs model size}},
+year = {2019}
+}
+
+@article{mixedquant2020,
+abstract = {The severe on-chip memory limitations are currently preventing the deployment of the most accurate Deep Neural Network (DNN) models on tiny MicroController Units (MCUs), even if leveraging an effective 8-bit quantization scheme. To tackle this issue, in this paper we present an automated mixed-precision quantization flow based on the HAQ framework but tailored for the memory and computational characteristics of MCU devices. Specifically, a Reinforcement Learning agent searches for the best uniform quantization levels, among 2, 4, 8 bits, of individual weight and activation tensors, under the tight constraints on RAM and FLASH embedded memory sizes. We conduct an experimental analysis on MobileNetV1, MobileNetV2 and MNasNet models for Imagenet classification. Concerning the quantization policy search, the RL agent selects quantization policies that maximize the memory utilization. Given an MCU-class memory bound of 2MB for weight-only quantization, the compressed models produced by the mixed-precision engine result as accurate as the state-of-the-art solutions quantized with a nonuniform function, which is not tailored for CPUs featuring integer-only arithmetic. This denotes the viability of uniform quantization, required for MCU deployments, for deep weights compression. When also limiting the activation memory budget to 512kB, the best MobileNetV1 model scores up to 68.4{\%} on Imagenet thanks to the found quantization policy, resulting to be 4{\%} more accurate than the other 8-bit networks fitting the same memory constraints.},
+archivePrefix = {arXiv},
+arxivId = {2008.05124},
+author = {Rusci, Manuele and Fariselli, Marco and Capotondi, Alessandro and Benini, Luca},
+eprint = {2008.05124},
+file = {:Users/Philipp/Downloads/2008.05124.pdf:pdf},
+journal = {arXiv},
+keywords = {Automated Quantization,Microcontrollers,Mixed-Precision,TinyML},
+pages = {1--12},
+title = {{Leveraging automated mixed-low-precision quantization for tiny edge microcontrollers}},
+year = {2020}
+}
+
+@article{sparsity2020,
+abstract = {The high energy cost of processing deep convolutional neural networks impedes their ubiquitous deployment in energy-constrained platforms such as embedded systems and IoT devices. This work introduces convolutional layers with pre-defined sparse 2D kernels that have support sets that repeat periodically within and across filters. Due to the efficient storage of our periodic sparse kernels, the parameter savings can translate into considerable improvements in energy efficiency due to reduced DRAM accesses, thus promising significant improvements in the trade-off between energy consumption and accuracy for both training and inference. To evaluate this approach, we performed experiments with two widely accepted datasets, CIFAR-10 and Tiny ImageNet in sparse variants of the ResNet18 and VGG16 architectures. Compared to baseline models, our proposed sparse variants require up to ∼82{\%} fewer model parameters with 5.6× fewer FLOPs with negligible loss in accuracy for ResNet18 on CIFAR-10. For VGG16 trained on Tiny ImageNet, our approach requires 5.8× fewer FLOPs and up to ∼83.3{\%} fewer model parameters with a drop in top-5 (top-1) accuracy of only 1.2{\%} (∼2.1{\%}). We also compared the performance of our proposed architectures with that of ShuffleNet and MobileNetV2. Using similar hyperparameters and FLOPs, our ResNet18 variants yield an average accuracy improvement of ∼2.8{\%}.},
+author = {Kundu, Souvik and Nazemi, Mahdi and Pedram, Massoud and Chugg, Keith M. and Beerel, Peter A.},
+file = {:Users/Philipp/Downloads/08988206.pdf:pdf},
+journal = {arXiv},
+keywords = {Complexity reduction,Convolutional neural network (CNN),Energy-efficient CNN,Parameter reduction,Pre-defined sparsity,Storage aware sparsity},
+number = {7},
+pages = {1045--1058},
+publisher = {IEEE},
+title = {{Pre-defined sparsity for low-complexity convolutional neural networks}},
+volume = {69},
+year = {2020}
+}
+
+@article{iotnet2019,
+abstract = {Two main approaches exist when deploying a Convolutional Neural Network (CNN) on resource-constrained IoT devices: either scale a large model down or use a small model designed specifically for resource-constrained environments. Small architectures typically trade accuracy for computational cost by performing convolutions as depth-wise convolutions rather than standard convolutions like in large networks. Large models focus primarily on state-of-the-art performance and often struggle to scale down sufficiently. We propose a new model, namely IoTNet, designed for resource-constrained environments which achieves state-of-the-art performance within the domain of small efficient models. IoTNet trades accuracy with computational cost differently from existing methods by factorizing standard 3 × 3 convolutions into pairs of 1 × 3 and 3 × 1 standard convolutions, rather than performing depth-wise convolutions. We benchmark IoTNet against state-of-the-art efficiency-focused models and scaled-down large architectures on data sets which best match the complexity of problems faced in resource-constrained environments. We compare model accuracy and the number of floating-point operations (FLOPs) performed as a measure of efficiency. We report state-of-the-art accuracy improvement over MobileNetV2 on CIFAR-10 of 13.43{\%} with 39{\%} fewer FLOPs, over ShuffleNet on Street View House Numbers (SVHN) of 6.49{\%} with 31.8{\%} fewer FLOPs and over MobileNet on German Traffic Sign Recognition Benchmark (GTSRB) of 5{\%} with 0.38{\%} fewer FLOPs.},
+author = {Lawrence, Tom and Zhang, Li},
+doi = {10.3390/s19245541},
+file = {:Users/Philipp/Downloads/sensors-19-05541.pdf:pdf},
+issn = {14248220},
+journal = {Sensors (Switzerland)},
+keywords = {Computational complexity,Computer vision,Convolutional Neural Network,Deep learning,Deep network architecture,Efficient architecture,Image classification},
+number = {24},
+pmid = {31847434},
+title = {{IoTNet: An efficient and accurate convolutional neural network for IoT devices}},
+volume = {19},
+year = {2019}
+}
+
+@article{memorydrivenquant2019,
+abstract = {This paper presents a novel end-to-end methodology for enabling the deployment of low-error deep networks on microcontrollers. To fit the memory and computational limitations of resource-constrained edge-devices, we exploit mixed low-bitwidth compression, featuring 8, 4 or 2-bit uniform quantization, and we model the inference graph with integer-only operations. Our approach aims at determining the minimum bit precision of every activation and weight tensor given the memory constraints of a device. This is achieved through a rule-based iterative procedure, which cuts the number of bits of the most memory-demanding layers, aiming at meeting the memory constraints. After a quantization-aware retraining step, the fake-quantized graph is converted into an inference integer-only model by inserting the Integer Channel-Normalization (ICN) layers, which introduce a negligible loss as demonstrated on INT4 MobilenetV1 models. We report the latency-accuracy evaluation of mixed-precision MobilenetV1 family networks on a STM32H7 microcontroller. Our experimental results demonstrate an end-to-end deployment of an integer-only Mobilenet network with Top1 accuracy of 68{\%} on a device with only 2MB of FLASH memory and 512kB of RAM, improving by 8{\%} the Top1 accuracy with respect to previously published 8 bit implementations for microcontrollers.},
+archivePrefix = {arXiv},
+arxivId = {1905.13082},
+author = {Rusci, Manuele and Capotondi, Alessandro and Benini, Luca},
+eprint = {1905.13082},
+file = {:Users/Philipp/Downloads/1905.13082.pdf:pdf},
+journal = {arXiv},
+title = {{Memory-driven mixed low precision quantization for enabling deep network inference on microcontrollers}},
+year = {2019}
+}
+
+@article{opreordering2019,
+abstract = {Designing deep learning models for highly-constrained hardware would allow imbuing many edge devices with intelligence. Microcontrollers (MCUs) are an attractive platform for building smart devices due to their low cost, wide availability, and modest power usage. However, they lack the computational resources to run neural networks as straightforwardly as mobile or server platforms, which necessitates changes to the network architecture and the inference software. In this work, we discuss the deployment and memory concerns of neural networks on MCUs and present a way of saving memory by changing the execution order of the network's operators, which is orthogonal to other compression methods. We publish a tool for reordering operators of TensorFlow Lite models1 and demonstrate its utility by sufficiently reducing the memory footprint of a CNN to deploy it on an MCU with 512KB SRAM.},
+archivePrefix = {arXiv},
+arxivId = {1910.05110},
+author = {Liberis, Edgar and Lane, Nicholas D.},
+eprint = {1910.05110},
+file = {:Users/Philipp/Downloads/1910.05110.pdf:pdf},
+journal = {arXiv},
+pages = {1--8},
+title = {{Neural networks on microcontrollers: saving memory at inference via operator reordering}},
+year = {2019}
+}
+
+@inproceedings{imagenet2009,
+        AUTHOR = {Deng, J. and Dong, W. and Socher, R. and Li, L.-J. and Li, K. and Fei-Fei, L.},
+        TITLE = {{ImageNet: A Large-Scale Hierarchical Image Database}},
+        BOOKTITLE = {CVPR09},
+        YEAR = {2009},
+        BIBSOURCE = "http://www.image-net.org/papers/imagenet_cvpr09.bib"}
+        
+        @article{cifar10,
+title= {CIFAR-10 (Canadian Institute for Advanced Research)},
+journal= {},
+author= {Alex Krizhevsky and Vinod Nair and Geoffrey Hinton},
+year= {},
+url= {http://www.cs.toronto.edu/~kriz/cifar.html},
+abstract= {The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
+
+The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. },
+keywords= {Dataset},
+terms= {}
+}
+
+
+@article{nassurvey,
+abstract = {Deep Learning has enabled remarkable progress over the last years on a variety of tasks, such as image recognition, speech recognition, and machine translation. One crucial aspect for this progress are novel neural architectures. Currently employed architectures have mostly been developed manually by human experts, which is a time-consuming and error-prone process. Because of this, there is growing interest in automated neural architecture search methods. We provide an overview of existing work in this field of research and categorize them according to three dimensions: search space, search strategy, and performance estimation strategy.},
+archivePrefix = {arXiv},
+arxivId = {1808.05377},
+author = {Elsken, Thomas and Metzen, Jan Hendrik and Hutter, Frank},
+eprint = {1808.05377},
+file = {:Users/Philipp/Downloads/1808.05377.pdf:pdf},
+journal = {arXiv},
+keywords = {AutoDL,AutoML,Neural Architecture Search,Performance Estimation Strategy,Search Space Design,Search Strategy},
+pages = {1--21},
+title = {{Neural architecture search: A survey}},
+volume = {20},
+year = {2018}
+}
+
+@article{cmsisnn2018,
+abstract = {Deep Neural Networks are becoming increasingly popular in always-on IoT edge devices performing data analytics right at the source, reducing latency as well as energy consumption for data communication. This paper presents CMSIS-NN, efficient kernels developed to maximize the performance and minimize the memory footprint of neural network (NN) applications on Arm Cortex-M processors targeted for intelligent IoT edge devices. Neural network inference based on CMSIS-NN kernels achieves 4.6X improvement in runtime/throughput and 4.9X improvement in energy efficiency.},
+archivePrefix = {arXiv},
+arxivId = {1801.06601},
+author = {Lai, Liangzhen and Suda, Naveen and Chandra, Vikas},
+eprint = {1801.06601},
+file = {:Users/Philipp/Downloads/1801.06601.pdf:pdf},
+journal = {arXiv},
+pages = {1--10},
+title = {{CMSIS-NN: Efficient neural network kernels for arm cortex-M CPUs}},
+year = {2018}
+}
+
+@misc{Chu2019,
+abstract = {The ability to rank models by its real strength is the key to Neural Architecture Search. Traditional approaches adopt an incomplete training for such purpose which is still very costly. One-shot methods are thus devised to cut the expense by reusing the same set of weights. However, it is uncertain whether shared weights are truly effective. It is also unclear if a picked model is better because of its vigorous representational power or simply because it is overtrained. In order to remove the suspicion, we propose a novel idea called Fair Neural Architecture Search (FairNAS), in which a strict fairness constraint is enforced for fair inheritance and training. In this way, our supernet exhibits nice convergence and very high training accuracy. The performance of any sampled model loaded with shared weights from the supernet strongly correlates with that of stand-alone counterpart when trained fully. This result dramatically improves the searching efficiency, with a multi-objective reinforced evolutionary search backend, our pipeline generated a new set of state-of-the-art architectures on ImageNet: FairNAS-A attains 75.34{\%} top-1 validation accuracy on ImageNet, FairNAS-B 75.10{\%}, FairNAS-C 74.69{\%}, even with lower multi-adds and/or fewer number of parameters compared with others. The models and their evaluation code are made publicly available online1.},
+archivePrefix = {arXiv},
+arxivId = {1907.01845},
+author = {Chu, Xiangxiang and Zhang, Bo and Xu, Ruijun and Li, Jixiang},
+booktitle = {arXiv},
+eprint = {1907.01845},
+issn = {23318422},
+title = {{FairNAS: Rethinking evaluation fairness of weight sharing neural architecture search}},
+year = {2019}
+}
+
+@inproceedings{Molchanov2019,
+abstract = {Structural pruning of neural network parameters reduces computational, energy, and memory transfer costs during inference. We propose a novel method that estimates the contribution of a neuron (filter) to the final loss and iteratively removes those with smaller scores. We describe two variations of our method using the first and second-order Taylor expansions to approximate a filter's contribution. Both methods scale consistently across any network layer without requiring per-layer sensitivity analysis and can be applied to any kind of layer, including skip connections. For modern networks trained on ImageNet, we measured experimentally a high ({\textgreater}93{\%}) correlation between the contribution computed by our methods and a reliable estimate of the true importance. Pruning with the proposed methods led to an improvement over state-of-the-art in terms of accuracy, FLOPs, and parameter reduction. On ResNet-101, we achieve a 40{\%} FLOPS reduction by removing 30{\%} of the parameters, with a loss of 0.02{\%} in the top-1 accuracy on ImageNet.},
+archivePrefix = {arXiv},
+arxivId = {1906.10771},
+author = {Molchanov, Pavlo and Mallya, Arun and Tyree, Stephen and Frosio, Iuri and Kautz, Jan},
+booktitle = {Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+doi = {10.1109/CVPR.2019.01152},
+eprint = {1906.10771},
+isbn = {9781728132938},
+issn = {10636919},
+keywords = {Deep Learning,Optimization Methods},
+title = {{Importance estimation for neural network pruning}},
+year = {2019}
+}
+
+@misc{Geada2020,
+abstract = {One-shot Neural Architecture Search (NAS) aims to minimize the computational expense of discovering state-of-the-art models. However, in the past year attention has been drawn to the comparable performance of na{\"{i}}ve random search across the same search spaces used by leading NAS algorithms. To address this, we explore the effects of drastically relaxing the NAS search space, and we present Bonsai-Net 1, an efficient one-shot NAS method to explore our relaxed search space. Bonsai-Net is built around a modified differential pruner and can consistently discover state-of-the-art architectures that are significantly better than random search with fewer parameters than other state-of-the-art methods. Additionally, Bonsai-Net performs simultaneous model search and training, dramatically reducing the total time it takes to generate fully-trained models from scratch.},
+archivePrefix = {arXiv},
+arxivId = {2006.09264},
+author = {Geada, Rob and Prangle, Dennis and McGough, Andrew Stephen},
+booktitle = {arXiv},
+eprint = {2006.09264},
+issn = {23318422},
+title = {{Bonsai-Net: One-shot Neural Architecture Search via differentiable pruners}},
+year = {2020}
+}
