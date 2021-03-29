@@ -22,15 +22,15 @@ Scientific Seminar on 'TinyNAS: Network Architecture Search for Automated Machin
 - [x] Writing Traning (23.11.20)
 - [x] Presentation Training I (07.12.20)
 - [x] Presentation Training II (21.12.20)
-- [ ] Practice Presentation (optional, TBD)
-- [ ] Final Presentation (22.01.21)
-- [ ] Debriefing (With supervisor)
+- ~~[ ] Practice Presentation (optional, TBD)~~
+- [x] Final Presentation (22.01.21)
+- [x] Debriefing (With supervisor)
 
 ### Time Periods:
 - [x] Choosing Topics (?-09.11.20)
 - [x] Research & Writing version v1.0 (10.11.-14.12.20)
 - [x] Writing & Begin slides & Peer Review (15.12-28.12.20)
-- [ ] Finish writing & slides (29.12.20-18.01.21)
+- [x] Finish writing & slides (29.12.20-18.01.21)
 
 ## Requirements
 
@@ -49,10 +49,6 @@ Scientific Seminar on 'TinyNAS: Network Architecture Search for Automated Machin
 - englisch/~german~
 
 ## Progres Documentation
-
-### TODOs
-
-- [ ] ...
 
 ### Main References
 
